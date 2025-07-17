@@ -6,9 +6,9 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Task {
-    String iD;
-    String title;
-    String description;
-    String status;
+    private String iD;
+    private String title;
+    private String description;
+    private String status;
 
 }
