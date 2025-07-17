@@ -83,7 +83,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"iD\":\"100\",\r\n    \"title\":\"100 push-ups\",\r\n    \"description\":\"Do a push-up 100 times\",\r\n    \"status\":\"Not complete\"\r\n}",
+					"raw": "{\r\n    \"title\":\"100 push-ups\",\r\n    \"description\":\"Do a push-up 100 times\",\r\n    \"status\":\"Not complete\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -112,7 +112,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"iD\":\"100\",\r\n    \"title\":\"100 push-ups\",\r\n    \"description\":\"Do a push-up 100 times\",\r\n    \"status\":\"Not complete\"\r\n}",
+							"raw": "{\r\n    \"title\":\"100 push-ups\",\r\n    \"description\":\"Do a push-up 100 times\",\r\n    \"status\":\"Not complete\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -147,7 +147,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Thu, 17 Jul 2025 17:32:14 GMT"
+							"value": "Thu, 17 Jul 2025 19:04:30 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -159,7 +159,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"message\": \"Added successfully\",\n    \"status\": \"200\"\n}"
+					"body": "{\n    \"message\": \"Task was added successfully\",\n    \"status\": \"200 OK\"\n}"
 				}
 			]
 		},

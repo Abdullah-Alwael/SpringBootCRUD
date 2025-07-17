@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @RequestMapping("/api/v1/tasks")
 public class TaskController {
     ArrayList<Task> tasks = new ArrayList<>();
-
+    int id = 100;
     @GetMapping("/list")
     public ArrayList<Task> getTasks() {
         return tasks;
@@ -18,6 +18,8 @@ public class TaskController {
 
     @PostMapping("/add")
     public ApiResponse addTask(@RequestBody Task task) {
+        task.setID(Integer.toString(id));
+        id++;
         tasks.add(task);
 
         return new ApiResponse("Task was added successfully", "200 OK");
