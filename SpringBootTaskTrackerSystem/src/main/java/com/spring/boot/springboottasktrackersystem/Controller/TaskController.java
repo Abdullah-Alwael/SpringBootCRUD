@@ -36,7 +36,7 @@ public class TaskController {
         if (deleted) {
             return new ApiResponse("Task was removed successfully", "200 OK");
         } else {
-            return new ApiResponse("Error: the task does not exist", "404: not found");
+            return new ApiResponse("Error: the task does not exist", "404 not found");
         }
     }
 
@@ -53,15 +53,38 @@ public class TaskController {
         if (updated) {
             return new ApiResponse("Task was updated successfully", "200 OK");
         } else {
-            return new ApiResponse("Error: the task does not exist", "404: not found");
+            return new ApiResponse("Error: the task does not exist", "404 not found");
         }
     }
 
 
-//		* Change the task status as done or not done
+    @PutMapping("status/{iD}/{status}")
+    public ApiResponse changeTaskStatus(@PathVariable String iD, @PathVariable String status) {
+        boolean statusChanged = false;
+        for (Task task : tasks) {
+            if (task.getID().equals(iD)) {
+                tasks.get(tasks.indexOf(task)).setStatus(status);
+                statusChanged = true;
+                break;
+            }
+        }
+        if (statusChanged) {
+            return new ApiResponse("Task status changed successfully", "200 OK");
+        } else {
+            return new ApiResponse("Error: the task does not exist", "404 not found");
+        }
 
+    }
 
-//		* Search for a task by given title
+    @GetMapping("/search/{title}")
+    public Task searchTask(@PathVariable String title) {
 
+        for (Task task : tasks) {
+            if (task.getTitle().contains(title)) {
+                return task;
+            }
+        }
+        return new Task(null, null, null, null); // not found
+    }
 
 }

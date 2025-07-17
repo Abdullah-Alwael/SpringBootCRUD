@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringBootTaskTrackerSystemApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootTaskTrackerSystemApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootTaskTrackerSystemApplication.class, args);
+    }
 
 
 }
